@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Steven Guh</string>
+	<key>Builder Version</key>
+	<string>14606.1.36.1.9</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pinchtify</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.stevenguh.pinchtify</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>Pinchtify.js</string>
+			</array>
+		</dict>
+		<key>Whitelist</key>
+		<array>
+			<string>https://www.google.com/maps/*</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Enable pinch-to-zoom in Google Maps</string>
+	<key>DeveloperIdentifier</key>
+	<string>T6MTQN2Z9Q</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>*.google.com</string>
+			</array>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>https://github.com/stevenguh/Pinchtify</string>
+</dict>
+</plist>
