@@ -9,8 +9,7 @@
     var queued = false;
     var scene = document.getElementById("scene");
 
-    function createWheelEvent(gestureEvent, deltaY)
-    {
+    function createWheelEvent(gestureEvent, deltaY) {
       return new WheelEvent("mousewheel", {
         // Wheel event properties
         // https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent
@@ -33,17 +32,31 @@
         bubbles: true,
       });
     }
+    function normalizeScale(scale) {
+      return scale < 0 ? Math.pow(10, scale) : scale;
+    }
+
+    function diffLog(log, diffLen) {
+      var first = log[log.length - 1];
+      diffLen = diffLen > (log.length - 2) ? (log.length - 2) : diffLen; 
+      var second = log[log.length - (2 + diffLen)];
+      return {
+        timeDiff: first.timeStamp - second.timeStamp,
+        scaleDiff: first.scale - second.scale,
+      };
+    }
+
+    function decayScale(scale, time) {
+      var decay = 0.01;
+      var isNegative = scale < 0 ? 1 : -1;
+      return Math.abs(scale) * Math.exp(-time * decay) * isNegative;
+    }
     
     scene.addEventListener("gesturestart", function (e) {
       e.preventDefault();
       lastScale = 1;
       pinchLog = [];
     });
-
-    function normalizeScale(scale)
-    {
-      return scale < 0 ? Math.pow(10, scale) : scale;
-    }
 
     scene.addEventListener("gesturechange", function (e) {
       e.preventDefault();
@@ -70,23 +83,6 @@
       queued = true;
       
     });
-
-    function diffLog(log, diffLen)
-    {
-      var first = log[log.length - 1];
-      diffLen = diffLen > (log.length - 2) ? (log.length - 2) : diffLen; 
-      var second = log[log.length - (2 + diffLen)];
-      return {
-        timeDiff: first.timeStamp - second.timeStamp,
-        scaleDiff: first.scale - second.scale,
-      };
-    }
-
-    function decayScale(scale, time) {
-      var decay = 0.01;
-      var isNegative = scale < 0 ? 1 : -1;
-      return Math.abs(scale) * Math.exp(-time * decay) * isNegative;
-    }
 
     scene.addEventListener("gestureend", function (e) {
       e.preventDefault();
