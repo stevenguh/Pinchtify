@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Content</key>
@@ -25,10 +25,6 @@
 				<string>Pinchtify.js</string>
 			</array>
 		</dict>
-		<key>Whitelist</key>
-		<array>
-			<string>https://www.google.com/maps/*</string>
-		</array>
 	</dict>
 	<key>Description</key>
 	<string>Enable pinch-to-zoom in Google Maps</string>
@@ -40,14 +36,10 @@
 	<dict>
 		<key>Website Access</key>
 		<dict>
-			<key>Allowed Domains</key>
-			<array>
-				<string>*.google.com</string>
-			</array>
 			<key>Include Secure Pages</key>
 			<true/>
 			<key>Level</key>
-			<string>Some</string>
+			<string>All</string>
 		</dict>
 	</dict>
 	<key>Website</key>
