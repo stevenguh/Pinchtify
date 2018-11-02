@@ -22,7 +22,7 @@
 		<dict>
 			<key>End</key>
 			<array>
-				<string>Pinchtify.js</string>
+				<string>pinchtify.js.min.js</string>
 			</array>
 		</dict>
 	</dict>
