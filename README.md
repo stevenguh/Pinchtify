@@ -1,4 +1,4 @@
-# Pinchtify
+# Pinchtify ([Safari Extension Gallery](https://safari-extensions.apple.com/details/?id=com.stevenguh.pinchtify-T6MTQN2Z9Q))
 ![](Assets/Icon-128.png)
 
 A Safari Extension to enable pinching gesture on websites that do not support Safari's pinching gesture.
